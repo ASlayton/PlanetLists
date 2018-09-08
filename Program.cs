@@ -20,6 +20,23 @@ namespace lists
             {
                 Console.WriteLine(item);
             }
+
+            List<string> rockyPlanets = new List<string>();
+            rockyPlanets = planetList.GetRange(0, 4);
+
+            Console.WriteLine("The following are considered Rocky Planets:");
+            foreach (var item in rockyPlanets)
+            {
+                Console.WriteLine(item);
+            }
+
+            planetList.Remove("Pluto");
+            Console.WriteLine("Um, Pluto is not considered good enough to be on this list...");
+            foreach (var item in planetList)
+            {
+                Console.WriteLine(item);
+            }
+
             Console.WriteLine("Press enter to exit");
             Console.ReadLine();
         }
